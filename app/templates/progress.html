@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Study Planner - Progress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Study Planner</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="progress-overview">
+            <h1>Your Progress</h1>
+
+            <div class="progress-section">
+                <h2>Overall Study Hours</h2>
+                <canvas id="studyHoursChart"></canvas>
+            </div>
+
+            <div class="progress-section">
+                <h2>Completed Tasks</h2>
+                <canvas id="completedTasksChart"></canvas>
+            </div>
+
+            <div class="progress-section">
+                <h2>Productivity Analysis</h2>
+                <p>Your most productive time is between <strong>9 AM - 11 AM</strong>. Keep it up!</p>
+                <canvas id="productivityChart"></canvas>
+            </div>
+
+            <div class="progress-section">
+                <h2>Streak Tracker</h2>
+                <p>You've met your study goals for <strong>5 consecutive days</strong>.</p>
+                <div class="streak-tracker">
+                    <div class="streak">
+                        <span class="day">Day 1</span>
+                        <span class="status">✓</span>
+                    </div>
+                    <div class="streak">
+                        <span class="day">Day 2</span>
+                        <span class="status">✓</span>
+                    </div>
+                    <div class="streak">
+                        <span class="day">Day 3</span>
+                        <span class="status">✓</span>
+                    </div>
+                    <div class="streak">
+                        <span class="day">Day 4</span>
+                        <span class="status">✓</span>
+                    </div>
+                    <div class="streak">
+                        <span class="day">Day 5</span>
+                        <span class="status">✓</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Dynamic Study Planner</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

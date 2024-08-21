@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Study Planner - About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Study Planner</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h1>About Us</h1>
+            <p>Welcome to Dynamic Study Planner! Our mission is to help students like you achieve academic success by providing personalized study planning tools that adapt to your habits, progress, and deadlines.</p>
+
+            <h2>Our Features</h2>
+            <ul class="features-list">
+                <li><strong>Study Session Tracking:</strong> Analyze your performance trends and adjust your plans for optimal productivity.</li>
+                <li><strong>Task Management:</strong> Stay on top of your deadlines with intelligent task scheduling and periodic reviews.</li>
+                <li><strong>Goal-Setting System:</strong> Break down large tasks into manageable chunks, with reminders to keep you on track.</li>
+                <li><strong>Calendar Integration:</strong> Balance your workload effectively by integrating with your calendar.</li>
+            </ul>
+
+            <h2>Meet the Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="John Doe">
+                    <h3>John Doe</h3>
+                    <p>Co-Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>Lead Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Alice Johnson">
+                    <h3>Alice Johnson</h3>
+                    <p>UX/UI Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Bob Brown">
+                    <h3>Bob Brown</h3>
+                    <p>Data Scientist</p>
+                </div>
+            </div>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to <a href="mailto:info@studyplanner.com">reach out to us via email</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Dynamic Study Planner</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Study Planner - Tasks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Study Planner</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tasks-section">
+            <h1>Your Tasks</h1>
+
+            <div class="tasks-header">
+                <h2>Current Tasks</h2>
+                <button id="addTaskBtn">+ Add New Task</button>
+            </div>
+
+            <table class="tasks-table">
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Subject</th>
+                        <th>Start Date</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tasksList">
+                    <!-- Example Tasks -->
+                    <tr>
+                        <td>Math Homework</td>
+                        <td>Math</td>
+                        <td>2024-08-18</td>
+                        <td>2024-08-21</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>Science Project</td>
+                        <td>Science</td>
+                        <td>2024-08-15</td>
+                        <td>2024-08-25</td>
+                        <td>Not Started</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Recently Completed Tasks</h2>
+            <ul class="completed-tasks-list">
+                <li>History Essay - Completed on 2024-08-17</li>
+                <li>Biology Lab Report - Completed on 2024-08-16</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Dynamic Study Planner</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Add Task Modal -->
+    <div id="addTaskModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="addTaskForm">
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" name="taskName" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" name="deadline" required>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="Not Started">Not Started</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

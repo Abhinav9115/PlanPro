@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Study Planner - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Study Planner</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Progress</a></li>
+                <li><a href="#">Tasks</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-banner">
+            <h1>Welcome back, [User's Name]!</h1>
+            <p>Your personalized study recommendations are ready.</p>
+        </section>
+
+        <section class="daily-overview">
+            <div class="card study-recommendations">
+                <h2>Study Recommendations</h2>
+                <p>You should focus on <strong>Math</strong> today for <strong>2 hours</strong>.</p>
+            </div>
+            <div class="card upcoming-tasks">
+                <h2>Upcoming Tasks</h2>
+                <ul>
+                    <li>Math Homework - Due tomorrow</li>
+                    <li>Science Project - Due in 3 days</li>
+                    <li>History Essay - Due in 5 days</li>
+                </ul>
+            </div>
+            <div class="card todays-progress">
+                <h2>Today's Progress</h2>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <p>50% of your study goal completed.</p>
+            </div>
+        </section>
+
+        <section class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>Completed Math Homework</li>
+                <li>Reviewed Science Notes</li>
+                <li>Started History Essay</li>
+            </ul>
+        </section>
+
+        <section class="weekly-focus">
+            <h2>Weekly Focus</h2>
+            <canvas id="weeklyFocusChart"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Dynamic Study Planner</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
